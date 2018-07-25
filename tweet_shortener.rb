@@ -21,7 +21,7 @@ def word_substituter(tweet)
   tweetArray = tweet.split(' ')
   temp = []
   tweetArray.each_with_index do |word, i|
-    if originalWords.find_index(word)
+    if originalWords.find_index(word.downcase)
       tweetArray[i] = myDictionary[word]
     end
   end
