@@ -22,7 +22,7 @@ def word_substituter(tweet)
   temp = []
   tweetArray.each_with_index do |word, i|
     if originalWords.find_index(word.downcase)
-      tweetArray[i] = myDictionary[word]
+      tweetArray[i] = myDictionary[word.downcase]
     end
   end
   finalTweet = tweetArray.join(' ')
